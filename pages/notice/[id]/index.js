@@ -24,11 +24,11 @@ class Index extends React.Component {
     return (
       <div>
         <Head>
-          <title>볼트앤너트</title>
+          <title>골프로</title>
         </Head>
         <Nav />
         <NoticeDetailConatiner/>
-        <Footer/>
+
       </div>
     )
   }

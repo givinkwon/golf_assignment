@@ -16,10 +16,10 @@ const WhiteCheckbox = withStyles({
     color: "#999999",
     borderRadius: "3px",
     "input:hover ~ &": {
-      boederColor: "#0933b3",
+      boederColor: "#068d18",
     },
     "&$checked": {
-      color: "#0933b3",
+      color: "#068d18",
     },
   },
   checked: {},

@@ -56,14 +56,14 @@ class Account extends React.Component {
         {Loading.is_open}
         {/* {Loading.is_open && <Spinner/>} */}
         <Head>
-          <title>볼트앤너트</title>
+          <title>골프로</title>
         </Head>
         <>
           { width > 767.98
             ? (<Nav />) : (<MobileNav width={width}/>)}
         </>
         <AccountConatiner query={query} />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

@@ -32,12 +32,11 @@ class BannerConatiner extends React.Component {
         <Container>
         { width > 767.98 ? (
           <>
-          <Text.FontSize56 color={'#0a2165'} >회원가입</Text.FontSize56>
+          <Text.FontSize56 color={'#068d18'} >회원가입</Text.FontSize56>
           </>
         ) : (
           <>
-          <span>회원가입</span>
-          {Auth.step === 0 && <span>둘 중 하나를 선택해주세요</span> }
+          <span >회원가입</span>
           </>
         )}
         </Container>
@@ -73,7 +72,7 @@ const Banner = styled.div`
         font-weight: bold;
         line-height: 1.55;
         letter-spacing: -0.5px;
-        color: #0a2165;
+        color: #068d18;
       }
       :nth-of-type(2){
         font-size: 12px;

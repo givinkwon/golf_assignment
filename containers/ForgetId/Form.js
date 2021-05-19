@@ -42,13 +42,13 @@ class FormConatiner extends React.Component {
     return (
       <Form>
         <Container>
-          <Text.FontSize56 color={'#0a2165'} fontWeight={700}>아이디 찾기</Text.FontSize56>
+          <Text.FontSize56 color={'#068d18'} fontWeight={700}>아이디 찾기</Text.FontSize56>
           <ForgetIDContainer>
-          <Text.FontSize20 color={"#0a2165"} fontWeight= {700}>가입 시 입력했던 휴대전화번호를 입력해 주세요.</Text.FontSize20>
+          <Text.FontSize20 color={"#068d18"} fontWeight= {700}>가입 시 입력했던 휴대전화번호를 입력해 주세요.</Text.FontSize20>
             <Text.FontSize20 color={'#505050'} fontWeight={'normal'}>휴대전화번호</Text.FontSize20>
             <Input placeholder='- 없이 입력해주세요' onChange={Auth.setPhone} value={Auth.phone} onKeyDown={this.handleKeyDown}/>
             <ButtonBox>
-              <ButtonComponent backgroundColor={"#0a2165"} borderColor={WHITE} borderRadius={3} borderWidth={1} onClick={Auth.forgetId}>
+              <ButtonComponent backgroundColor={"#068d18"} borderColor={WHITE} borderRadius={3} borderWidth={1} onClick={Auth.forgetId}>
                 {
                   Auth.loading
                   ? <ButtonSpinnerComponent scale='50%' primary/>

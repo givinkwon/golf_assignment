@@ -44,11 +44,11 @@ class Offered extends React.Component {
         {Loading.is_open}
         {/* {Loading.is_open && <Spinner/>} */}
         <Head>
-          <title>볼트앤너트</title>
+          <title>골프로</title>
         </Head>
         <Nav />
         <OfferedContainer />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

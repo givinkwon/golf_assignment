@@ -127,45 +127,35 @@ class MobileNav extends React.Component {
             <ProfileMenu width={this.props.width} onClick={() => this.setState({is_open: false})}>
               <ModalHeader>
                 <div style={{marginBottom: 50, width: '100%'}}>
-                  <Logo onClick={() => {if (is_open == true) {Router.push('/')}}} src={logo_ic} style={{float:'left'}}/>
+                  <Logo onClick={() => {if (is_open == true) {Router.push('/')}}} style={{float:'left', color:"#068d18"}}>골프로</Logo>
                   <img src={ close_ic } style={{float: 'right'}}/>
                 </div>
-                <div style={{height:14}}>엔지니어와 연구원을 위한 제조 상담 플랫폼</div>
+                <div style={{height:14}}>골프장 리뷰는 골프로</div>
               {Auth.logged_in_partner? 
               <FreeButton onClick={() => Router.push("/project")}>
-                <span style={{marginTop: 1}}>프로젝트 찾아보기</span>
+                <span style={{marginTop: 1}}>골프장</span>
               </FreeButton>
               :
-              <FreeButton onClick={() => Router.push("/request")}>
-                <span style={{marginTop: 1}}>무료 상담 및 견적 받기</span>
+              <FreeButton onClick={() => Router.push("/manufacturer")}>
+                <span style={{marginTop: 1}}>지금 바로 확인하기</span>
               </FreeButton>
               }
             </ModalHeader>
-          <>
-            <ModalContent>
-              <p onClick={() => Router.push("/project")}>프로젝트 관리</p>
-              <p onClick={() => Router.push("/magazine")}>제조 인사이트</p>
-              <p onClick={() => Router.push("/manufacturer")}>제조사 찾기</p>
-              {Auth.logged_in_user && <p onClick={() => Router.push("/chatting")}>채팅하기</p>}
-            </ModalContent>
-          </>
+            {Auth.logged_in_user ? (
+            
               <ModalContent2>
-                <p onClick={() => Router.push("/faq")}>자주찾는 질문</p>
-                <p onClick={() => Router.push("/term/policy")}>이용약관</p>
-                <p onClick={() => Router.push("/term/personal")}>개인정보 처리 방침</p>
+                <div onClick={this.logout} style={{cursor:"pointer"}}> 로그아웃 </div>
+
               </ModalContent2>
-              {Auth.logged_in_user ? (
-                  <Footer>
-                    <div onClick={this.logout}> 로그아웃 </div>
-                  </Footer>
-                ) :
-                (
-                  <Footer>
-                    <div style={{display: 'flex', alignItems:'center', justifyContent:'center', borderRight: "solid 1px #e1e2e4", height:32}} onClick={() => Router.push("/login")}>로그인</div>
-                    <div style={{display: 'flex', alignItems:'center', justifyContent:'center', height:32}} onClick={() => Router.push("/signup")}>회원가입</div>
-                  </Footer>
-                )
-              }
+            ) : 
+            (
+              <ModalContent2>
+              <div style={{display: 'flex', alignItems:'center',cursor:"pointer", justifyContent:'center', borderRight: "solid 1px #e1e2e4", height:32}} onClick={() => Router.push("/login")}>로그인</div>
+              <div style={{display: 'flex', alignItems:'center',cursor:"pointer", justifyContent:'center', height:32}} onClick={() => Router.push("/signup")}>회원가입</div>
+              </ModalContent2>
+            )
+           
+            }
             </ProfileMenu>
           </Modal>
           )}
@@ -174,13 +164,9 @@ class MobileNav extends React.Component {
             {/* {typeof window !== 'undefined' && window.location.pathname != '/' && window.location.pathname !='/login' ? ( */}
             {this.props.src=== '/static/images/components/MobileNav/MobileLogo.svg'? (
 
-            //   <Logo src={this.props.src} onClick={() => Router.back()} />
-            // ) : (
-            //   <Logo src={this.props.src} onClick={()=>Router.push('/')}/>
-            // )}
-            <Logo src={this.props.src} onClick={()=>Router.push('/')}/>
+            <Logo onClick={()=>Router.push('/')} style={{color:"#068d18"}}>골프로</Logo>
             ) : (
-              <Logo src={this.props.src} onClick={() => Router.back()} />
+              <Logo onClick={() => Router.back()} style={{color:"#068d18"}}>골프로 </Logo>
             )}
 
             <HeadText>{this.props.headText}</HeadText>
@@ -366,9 +352,11 @@ const NavWrap2 = styled.div`
   padding-left: 18px;
   padding-right: 18px;
 `;
-const Logo = styled.img`
+const Logo = styled.div`
   cursor: pointer;
   z-index: 9999;
+  font-weight: bold !important;
+  font-size: 32px;
 `;
 const Icon = styled.img`
   cursor: pointer;

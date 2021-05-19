@@ -97,23 +97,11 @@ class Step2Conatiner extends React.Component {
       <SectionContainer style={{paddingTop : 50, paddingBottom : 130}} >
         <InfoContainer>
           <Container>
-            {
-              Auth.type === 'client' && (
-                <>
-                  <Email/>
-                </>
-              )
-            }
-            {
-              Auth.type === 'expert' && (
-                <>
-                  <PartnerEmailConatiner/>
-                  <Company/>
-                  <Category/>
-                  <File/>
-                </>
-                )
-            }
+            
+
+            <Email/>
+
+        
             { width > 767.98 ? (
             <>
               <TermsContainer>
@@ -150,7 +138,7 @@ class Step2Conatiner extends React.Component {
                 {/* <ButtonComponent backgroundColor='#e6e6e6' borderColor='#e6e6e6' borderRadius={100} onClick={() => Auth.setStep(0)}>
                   <Text.FontSize20 color='#a0a0a0' fontWeight={500}>이전</Text.FontSize20>
                 </ButtonComponent> */}
-                <ButtonComponent id="sign_up_button_complete_div" backgroundColor={PRIMARY} borderColor={PRIMARY} borderRadius={100} onClick={this.handleSubmit}>
+                <ButtonComponent id="sign_up_button_complete_div" backgroundColor={"#068d18"} borderColor={"#068d18"} borderRadius={100} onClick={this.handleSubmit}>
                   {
                     Auth.loading
                     ? <ButtonSpinnerComponent/>
@@ -165,7 +153,6 @@ class Step2Conatiner extends React.Component {
               <TermsContainer>
                 <Terms>
                   <CheckBoxComponent
-                    primary
                     checked = {this.state.accept_terms}
                     onChange={this.toggleCheckBox}
                     >
@@ -193,10 +180,7 @@ class Step2Conatiner extends React.Component {
                 </Terms>
               </TermsContainer>
               <ButtonBox>
-                {/* <ButtonComponent backgroundColor='#e6e6e6' borderColor='#e6e6e6' borderRadius={100} onClick={() => Auth.setStep(0)}>
-                  <Text.FontSize20 color='#a0a0a0' fontWeight={500}>이전</Text.FontSize20>
-                </ButtonComponent> */}
-                <ButtonComponent id="sign_up_button_complete_div" backgroundColor={PRIMARY} borderColor={PRIMARY} borderRadius={100} onClick={this.handleSubmit}>
+                <ButtonComponent id="sign_up_button_complete_div" backgroundColor={"#068d18"} borderColor={"#068d18"} borderRadius={100} onClick={this.handleSubmit}>
                   {
                     Auth.loading
                     ? <ButtonSpinnerComponent/>
@@ -284,11 +268,11 @@ const ButtonBox = styled.div`
   div {
     border-radius: 3px;
     box-shadow: 0 3px 6px 0 rgba(123, 123, 123, 0.64);
-    background-color: #0a2165;
+    background-color: #068d18;
     width : 147px ; 
     height: 52px;
     :hover {
-    background-color : #0933b3;
+    background-color : #068d18;
   }
   }
   
@@ -349,7 +333,7 @@ const Link = styled.a`
 `;
 const PrimaryColor = styled.a`
   display: inline-block;
-  color: ${PRIMARY2};
+  color: #068d18;
 `;
 
 

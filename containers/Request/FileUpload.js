@@ -1128,7 +1128,7 @@ class FileUploadContainer extends Component {
                         >
                           <div
                             style={{
-                              color: "#0933b3",
+                              color: "#068d18",
                               fontSize: "20px",
                               fontWeight: "bold",
                               marginBottom: "-3px",

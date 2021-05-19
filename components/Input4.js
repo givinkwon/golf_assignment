@@ -30,17 +30,17 @@ const CustomInput = withStyles({
       color: '#c7c7c7',
     },
     "& .MuiInput-underline:after": {
-      borderColor: "#0933b3"
+      borderColor: "#068d18"
     },
     '& .MuiOutlinedInput-root': {
       "& fieldset": {
         borderColor: "#c7c7c7"
       },
       "&:hover fieldset": {
-        borderColor: "#0933b3"
+        borderColor: "#068d18"
       },
       '&.Mui-focused fieldset': {
-        borderColor: '#0933b3',
+        borderColor: '#068d18',
       },
     }, 
     // '& input': {

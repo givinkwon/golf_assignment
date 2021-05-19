@@ -5,7 +5,7 @@ import Background from "components/Background";
 import * as Title from "components/Title";
 import Fade from "react-reveal/Fade";
 
-const Img = "/static/images/Home/Banner2/image1.png";
+const Img = "/static/images/Home/Banner2/image1.jpg";
 
 class MobileBanner2Container extends React.Component {
   render() {
@@ -13,12 +13,10 @@ class MobileBanner2Container extends React.Component {
       <Background backgroundColor={"#ffffff"}>
         <ContentContainer>
           <Fade bottom>
-            <Header>무료 생산 상담</Header>
+            <Header>골프장 정보 확인</Header>
             <Middle>
-              내가 설계한 부품장비
-              <br />
-              {/* <span>무료 도면 수정 </span> */}
-              생산에 문제가 없을까?
+            <span>가격, 시설 정보부터</span> <br />
+              <span>잔디 상태까지</span>
             </Middle>
             <ImgContainer>
               <img
@@ -27,9 +25,9 @@ class MobileBanner2Container extends React.Component {
               />
             </ImgContainer>
             <Body>
-              생산에 대한 모든 문의사항은 4000여 개
-              <br />
-              전문 제조사들이 바로 상담해드립니다.
+            전국 500 여 개 골프장의 모든
+                <br />
+                정보를 확인해보세요
             </Body>
           </Fade>
         </ContentContainer>

@@ -66,7 +66,7 @@ class AnswerList extends React.Component {
         </Head>
         <Nav />
         <AnswerListConatiner />
-        <Footer/>
+
       </div>
     )
   }

@@ -23,15 +23,15 @@ class Banner3Container extends React.Component {
               <img src={image1} style={{ height: "100%" }} />
             </div>
             <div>
-              <Header>무료 생산 상담</Header>
+            <Header>골프장 찾아보기</Header>
               <Middle>
-                <span>내가 설계한 부품장비</span>
-                <span>생산에 문제가 없을까?</span>
+                <span>원하는 골프장</span><br/>
+                <span> 검색이 한 번에</span>
               </Middle>
               <Body>
-                생산에 대한 모든 문의사항을 4000여 개
+                내가 원하는 골프장을 찾아보세요. 
                 <br />
-                전문 제조사들이 바로 상담해드립니다.
+                지역별, 특징별 필터로 원하는 골프장을 찾을 수 있습니다.
               </Body>
             </div>
           </Fade>

@@ -80,7 +80,7 @@ class MobileBanner0Container extends React.Component {
               height: "49px",
 
             }}
-            onClick={() => Router.push("/request")}
+            onClick={() => Router.push("/manufacturer")}
           >
             <p style={{ paddingBottom: 0.2 }}>지금 바로 확인하기</p>
           </Buttonv1>

@@ -67,7 +67,7 @@ class Home extends React.Component {
           />
           <meta property="og:url" content="https://www.boltnnut.com/" />
           {/* Title */}
-          <title>볼트앤너트</title>
+          <title>골프로</title>
         </Head>
 
         <div>
@@ -82,7 +82,7 @@ class Home extends React.Component {
               <HomeConatiner width={width} reqList={Home.request_list} />
             )}
           </>
-          <>{width && <Footer />}</>
+          {/* <>{width && <Footer />}</> */}
         </div>
       </>
     );

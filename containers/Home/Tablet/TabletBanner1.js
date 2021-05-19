@@ -1,117 +1,82 @@
 import React from "react";
-import Background from "components/Background";
-import Containerv1 from "components/Containerv1";
-import * as Title from "components/Title";
 import styled from "styled-components";
+import Containerv1 from "components/Containerv1";
+import Background from "components/Background";
+import * as Title from "components/Title";
+import * as Content from "components/Content";
 import Fade from "react-reveal/Fade";
-import { inject, observer } from "mobx-react";
 
-const BannerImg = "static/images/Home/Banner1/Banner1.png";
-const backgroundImg = "/static/images/Home/Banner3/Banner3_Bg.png";
+const Img = "/static/images/Home/Banner1/image1.jpg";
 
-@inject("Proposal", "Partner")
-@observer
 class TabletBanner1Container extends React.Component {
   render() {
-    const ProjectCount = this.props.Proposal.projects_count;
     return (
-      <Background src={backgroundImg}>
-        <ContentContainer>
+      <Background backgroundColor={"#ffffff"}>
+        <Containerv1
+          style={{
+            paddingBottom: 150,
+            paddingTop: 150,
+            justifyContent: "space-between",
+          }}
+        >
           <Fade bottom>
-            <Image>
-              <ImageContainer>
-                <div>
-                  <img src={BannerImg} />
-                </div>
-              </ImageContainer>
-            </Image>
-            <div>
-              <Head>볼트앤너트 AI 자동 견적</Head>
-              <Main>
-                <span>
-                  바로 나오는
-                  <br />
-                  AI 자동 견적
-                </span>{" "}
-              </Main>
+            <div style={{ marginRight: "-50px" }}>
+              <img src={Img} style={{
+                  width: 347,
+                  height: 255,
+                  borderRadius: 7,
+                }} />
+            </div>
 
-              {/* <Content>{ProjectCount}건의 데이터에 기반한 자동견적 알고리즘이<br/>평균 2일의 견적 시간을 한 번에 해결해 드립니다.</Content> */}
-              <Content>
-                볼트앤너트 AI 자동 견적 알고리즘이 <br />
-                제작품에 대한 견적 범위를 바로 안내해드립니다.
-              </Content>
+            <div>
+              <Header>골프장 리뷰 확인</Header>
+              <Middle style={{ fontSize: "32px" }}>
+                <span>국내 모든 골프장</span><br/>
+                <span>정보와 리뷰</span>
+              </Middle>
+              <Body>
+                전국 500 여 개 골프장 리뷰를 온라인에서
+                <br />
+                한 번에 확인해보세요
+              </Body>
             </div>
           </Fade>
-        </ContentContainer>
+        </Containerv1>
       </Background>
     );
   }
 }
+
 export default TabletBanner1Container;
-const ContentContainer = styled(Containerv1)`
-  display: flex;
-  flex-direction: row;
-`;
 
-const Image = styled.div`
-  display: flex;
-  flex-direction: row;
-  // margin-right: 40px;
-`;
-
-const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 246px;
-  margin-top: 185px;
-  > div {
-    > img {
-      width: 90%;
-      height: 90%;
-    }
-  }
-`;
-const Head = styled(Title.FontSize20)`
-  //color: #0933b3;
-  color: #ffffff;
+const Header = styled(Title.FontSize17)`
+  color: #0933b3;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.45;
+  line-height: 1.46;
   letter-spacing: normal;
-  margin: 173px 0px 0px 0px;
-  @media (min-width: 767.99px) and (max-width: 1279.98px) {
-    font-size: 18px;
-  }
+  margin-bottom: 2px;
 `;
-const Main = styled(Title.FontSize56)`
-  color: #ffffff;
-  font-weight: 500;
+const Middle = styled(Content.FontSize24)`
+  //color: #f6f6f6;
+  color: #282c36;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.36;
   letter-spacing: -1.4px;
-  margin-bottom: 64px;
-  > span {
-    font-weight: 500;
-  }
-  @media (min-width: 767.99px) and (max-width: 1279.98px) {
-    font-size: 32px;
-  }
+  margin-bottom: 62px;
+  font-size: 32px; !important;
 `;
-const Content = styled(Title.FontSize24)`
+
+const Body = styled(Content.FontSize17)`
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.67;
   letter-spacing: -0.6px;
   text-align: left;
-  // color: #282c36;
-  color: #ffffff;
-  margin-bottom: 150px;
-  @media (min-width: 767.99px) and (max-width: 1279.98px) {
-    font-size: 17px;
-  }
+  //color: #cedafe;
+  color: #282c36;
 `;

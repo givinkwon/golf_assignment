@@ -22,6 +22,7 @@ export default class ButtonSpinner extends React.Component {
       animationData: spinnerDataPrimary,
       rendererSettings: {
         preserveAspectRatio: "xMidYMid slice",
+
       },
     };
     return (

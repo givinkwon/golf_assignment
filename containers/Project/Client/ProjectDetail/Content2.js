@@ -48,7 +48,7 @@ class Content2 extends React.Component {
           <Container2Body>
             <div>
               <Font22 style={{ fontWeight: "bold" }}>지원한 파트너</Font22>
-              <Font24 style={{ marginLeft: 6, color: "#0933b3" }}>3</Font24>
+              <Font24 style={{ marginLeft: 6, color: "#068d18" }}>3</Font24>
             </div>
             <PartnerCategory>
               <div>

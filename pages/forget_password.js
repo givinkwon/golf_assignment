@@ -52,7 +52,7 @@ class ForgetPassword extends React.Component {
         { width && width > 767.98 && <Nav />}
         { width && width < 768 && <MobileNav src={ logo_ic } width={ width }/>}
         <ForgetPasswordConatiner/>
-        <Footer/>
+
       </div>
     )
   }

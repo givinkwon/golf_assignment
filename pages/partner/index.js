@@ -65,7 +65,7 @@ class Partner extends React.Component {
         }
         </>
         <PartnerConatiner query={this.props.query}/>
-        <Footer/>
+
       </div>
       }
       </>

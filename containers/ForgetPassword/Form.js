@@ -44,7 +44,7 @@ class FormConatiner extends React.Component {
     return (
       <Form>
         <Container>
-          <Text.FontSize56 color={'#0a2165'} fontWeight={700}>비밀번호 찾기</Text.FontSize56>
+          <Text.FontSize56 color={'#068d18'} fontWeight={700}>비밀번호 찾기</Text.FontSize56>
           <ForgetPasswordContainer>
             <Text.FontSize20 color={'#505050'}>아이디</Text.FontSize20>
             <Input placeholder='아이디를 입력하세요' onChange={Auth.setEmail} value={Auth.email}/>
@@ -56,7 +56,7 @@ class FormConatiner extends React.Component {
               </Text.FontSize15>
             </More>
             <ButtonBox>
-              <ButtonComponent backgroundColor={"#0a2165"} borderColor={WHITE} borderRadius={3} borderWidth={1} onClick={Auth.forget}>
+              <ButtonComponent backgroundColor={"#068d18"} borderColor={"#068d18"} borderRadius={3} borderWidth={1} onClick={Auth.forget}>
                 {
                   Auth.loading
                   ? <ButtonSpinnerComponent scale='50%' primary/>

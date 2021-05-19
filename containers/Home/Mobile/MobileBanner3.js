@@ -1,97 +1,95 @@
 import React from "react";
 import styled from "styled-components";
-
-//Components
+import Containerv1 from "components/Containerv1";
 import Background from "components/Background";
 import * as Title from "components/Title";
-import * as Content from "components/Content";
 import Fade from "react-reveal/Fade";
 
-import { inject, observer } from "mobx-react";
+const Img = "/static/images/Home/Banner3/image1.jpg";
 
-//Image
-const image1 = "/static/images/Home/Banner3/image1.png";
-
-@inject("Proposal")
-@observer
-class MobileBanner3Container extends React.Component {
+class MobileBanner2Container extends React.Component {
   render() {
-    const ProjectCount = this.props.Proposal.projects_count;
     return (
-      <Background
-        style={{
-          paddingBottom: 100,
-          paddingTop: 100,
-          justifyContent: "center",
-        }}
-      >
-        <Fade bottom>
-          <div>
-            <Header>무료 비교 견적 서비스</Header>
+      <Background backgroundColor={"#ffffff"}>
+        <ContentContainer>
+          <Fade bottom>
+            <Header>골프장 찾아보기</Header>
             <Middle>
-              전문 제조사들에게 <br />
-              다양한 비교 견적
+            <span>
+                원하는 모든 골프장을 <br />  한 번에 검색하세요.
+                </span>
             </Middle>
-            <div>
+            <ImgContainer>
               <img
-                src={image1}
+                src={Img}
                 style={{ width: 347, height: 230, borderRadius: 7 }}
               />
-            </div>
+            </ImgContainer>
             <Body>
-              원하는 품질과 납기를 만족하는 제조사들을 선별해
-              <br />
-              다양한 비교견적을 쉽고 편리하게 받을 수 있습니다.
+            내가 원하는 골프장을 찾아보세요. 
+                <br />
+                지역별, 특징별 필터로 원하는 
+                <br/>
+                골프장을 찾을 수 있습니다.
             </Body>
-          </div>
-        </Fade>
+          </Fade>
+        </ContentContainer>
       </Background>
     );
   }
 }
 
-export default MobileBanner3Container;
-
-const Header = styled(Title.FontSize13)`
+export default MobileBanner2Container;
+const ContentContainer = styled(Containerv1)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const Header = styled(Title.FontSize20)`
   height: 19px;
   color: #0933b3;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.46;
+  line-height: 1.45;
   letter-spacing: normal;
-  margin-bottom: 3px;
-  text-align: center;
+  margin: 100px 0px 3px 0px;
+  @media (min-width: 0px) and (max-width: 767.98px) {
+    font-size: 13px;
+  }
 `;
-const Middle = styled(Content.FontSize22)`
-  font-size: 23px !important;
-  height: 62px;
+const Middle = styled(Title.FontSize56)`
+  text-align: center;
   color: #282c36;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.64;
+  line-height: 1.45;
   letter-spacing: -0.55px;
-  margin-bottom: 32px;
-  text-align: center;
-  @media (min-width: 0px) and (max-width: 767.98px) {
-    line-height: 1.45;
-  }
-  > p {
-    font-weight: bold;
+  > span {
     display: inline;
+    font-weight: bold;
+  }
+  @media (min-width: 0px) and (max-width: 767.98px) {
+    font-size: 23px;
   }
 `;
-
-const Body = styled(Content.FontSize15)`
-  font-size: 16px !important;
-  height: 44px;
+const ImgContainer = styled.div`
+  margin: 32px 0px 18px 0px;
+`;
+const Body = styled(Title.FontSize16)`
+  text-align: center;
+  white-space: nowrap;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.6;
+  line-height: 1.67;
   letter-spacing: -0.38px;
-  color: #414550;
-  margin-top: 18px;
-  text-align: center;
+  // text-align: left;
+  color: #414550;\
+  margin-bottom: 100px;
+  @media (min-width: 0px) and (max-width: 767.98px) {
+    font-size: 16px;
+    height: 44px;
+  }
 `;

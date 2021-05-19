@@ -38,7 +38,7 @@ class Index extends React.Component {
         </Head>
         <Nav />
         <MagazineDetailConatiner/>
-        <Footer/>
+        
       </div>
     )
   }

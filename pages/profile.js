@@ -33,7 +33,7 @@ class Profile extends React.Component {
     return (
       <div>
         <Head>
-          <title>볼트앤너트</title>
+          <title>골프로</title>
         </Head>
         <>
         { width > 767.98 ? (
@@ -44,7 +44,7 @@ class Profile extends React.Component {
         }
         </>
         { Profile.data && <ProfileConatiner/> }
-        <Footer/>
+
       </div>
     )
   }

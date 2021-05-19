@@ -263,7 +263,7 @@ class Content1 extends React.Component {
               >
                 지원한 파트너
                 {user == "client" && projectDetailData.request_set[0].client == Auth.logged_in_client.id && (
-                  <p style={{ color: "#0933b3", marginLeft: 6 }}>
+                  <p style={{ color: "#068d18", marginLeft: 6 }}>
                     {this.state.partnerList.length}
                   </p>
                 )}

@@ -14,10 +14,10 @@ const WhiteCheckbox = withStyles({
     "&$checked": {
       color: WHITE,
     "input:hover ~ &": {
-      boederColor: "#0933b3",
+      boederColor: "#068d18",
     },
     "&$checked": {
-      color: "#0933b3",
+      color: "#068d18",
     },
     },
   },
@@ -28,7 +28,7 @@ const PrimaryCheckbox = withStyles({
   root: {
     color: '#404040',
     "&$checked": {
-      color: PRIMARY,
+      color: "#068d18",
     },
   },
   checked: {},

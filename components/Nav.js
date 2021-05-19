@@ -86,27 +86,7 @@ class Nav extends React.Component {
           }
         }
       });
-    } else {
-      if (splitedRoute[1] === "partner") {
-        alert("접근할 수 없는 페이지입니다");
-        Router.push("/login");
-      }
-
-      // // 로그인 하지 않고 /partner/[id]로 들어오는 사용자 리다이렉트
-      // if(splitedRoute[1] === 'partner' && splitedRoute.length >= 3) {
-      //  alert("로그인이 필요합니다");
-      //  Router.push("/login");
-      // }
-      this.needPermission.forEach((url) => {
-        if (url === splitedRoute[1]) {
-          if (requestId != 923) {
-            alert("로그인이 필요합니다");
-            Router.push("/login");
-          }
-        }
-      });
-    }
-
+    } 
     // 토큰은 있는데 userInfo가 mobx에 없으면 리로딩
     await Auth.checkLogin();
 
@@ -132,7 +112,7 @@ class Nav extends React.Component {
             style={{ display: "inline", justifyContent: "space-between" }}
           >
             <NavWrap>
-              <Logo src={logo_ic} onClick={() => Router.push("/")} />
+              <Logo onClick={() => Router.push("/")} style={{fontSize: "32px", color:"#068d18"}} >골프로</Logo>
               <Menu is_open={is_open}>
                 <Close>
                   <Icon
@@ -141,74 +121,6 @@ class Nav extends React.Component {
                   />
                 </Close>
 
-                {this.props.Auth.logged_in_user ? (
-                  this.props.Auth.logged_in_user.type === 0 ? (
-                    /* client로 로그인 */
-
-                    <Fragment>
-                      <NavLink
-                        onClick={() => Router.push("/project")}
-                        active={url.indexOf("project") > -1}
-                      >
-                        <p class="line"> 프로젝트 관리 </p>
-                      </NavLink>
-                      <NavLink
-                        onClick={() => Router.push("/manufacturer")}
-                        active={url.indexOf("manufacturer") > -1}
-                      >
-                        <p class="line"> 제조사 찾기 </p>
-                      </NavLink>
-                      <NavLink
-                        onClick={() => Router.push("/magazine")}
-                        active={url.indexOf("magazine") > -1}
-                      >
-                        <p class="line"> 제조 인사이트 </p>
-                      </NavLink>
-                    </Fragment>
-                  ) : (
-                    /* partner로 로그인 */
-                    <Fragment>
-          
-                      <NavLink
-                        onClick={() => Router.push("/project")}
-                        active={url.indexOf("project") > -1}
-                      >
-                        {console.log(url)}
-                        <p class="line"> 프로젝트 찾기 </p>
-                      </NavLink>
-                      <NavLink
-                        onClick={() => Router.push("/magazine")}
-                        active={url.indexOf("magazine") > -1}
-                      >
-                        제조 인사이트
-                      </NavLink>
-                     
-                    </Fragment>
-                  )
-                ) : (
-                  /* 로그인 안되어있는 경우 */
-                  <Fragment>
-
-                    <NavLink
-                      onClick={() => Router.push("/project")}
-                      active={url.indexOf("project") > -1}
-                    >
-                      <p class="line"> 프로젝트 찾기 </p>
-                    </NavLink>
-                    <NavLink
-                        onClick={() => Router.push("/manufacturer")}
-                        active={url.indexOf("manufacturer") > -1}
-                      >
-                        <p class="line"> 제조사 찾기 </p>
-                      </NavLink>
-                    <NavLink
-                      onClick={() => Router.push("/magazine")}
-                      active={url.indexOf("magazine") > -1}
-                    >
-                      제조 인사이트
-                    </NavLink>
-                  </Fragment>
-                )}
                 {/* 로그인한/안한 경우 */}
                 {token ? (
                   <div style={{ display: "flex", justifyContent: "center" }}>
@@ -219,16 +131,9 @@ class Nav extends React.Component {
                     {is_profile && (
                       <ProfileMenu>
                         <div>
-                          {/* <Font17>
-                            안녕하세요, 기빈님
-                          </Font17> */}
+
                         </div>
                         <div>
-                          <div onClick = {()=>Router.push('/chatting') }>
-                            <Font16>
-                            채팅하기
-                            </Font16>
-                          </div>
 
                           <div onClick={() => Router.push("/account?tab=1")}>
                             <Font16>
@@ -255,29 +160,16 @@ class Nav extends React.Component {
                   </NavLink>
                 )}
 
-                {this.props.Auth.logged_in_user && this.props.Auth.logged_in_user.type === 1 ? 
-                (
-                    /* partner로 로그인 */
-                    <ButtonContainer
-                    first
-                    onClick={() => Router.push("/project")}
-
-                    active={url.indexOf("project") > -1}
-                  >
-                    프로젝트 관리
-                  </ButtonContainer>
-
-                ) : (
                 <ButtonContainer
                   first
-                  onClick={() => Router.push("/request")}
+                  onClick={() => Router.push("/manufacturer")}
 
-                  active={url.indexOf("request") > -1}
+                  active={url.indexOf("manufacturer") > -1}
                 >
-                  상담 받기
+                  골프장 찾기
                 </ButtonContainer>
-                )
-              }
+
+              
               </Menu>
               <Icon
                 src={hamburger_ic}
@@ -392,10 +284,11 @@ const NavWrap = styled.div`
   align-items: center;
   height: 60px;
 `;
-const Logo = styled.img`
+const Logo = styled.div`
   cursor: pointer;
   width: auto;
   height: auto;
+  font-weight: bold !important;
 `;
 const Icon = styled.img`
   cursor: pointer;

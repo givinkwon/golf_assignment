@@ -40,14 +40,14 @@ class CompleteConatiner extends React.Component {
     return (
       <Form>
         <Container>
-          <Text.FontSize56 color={'#0a2165'} fontWeight={700}>비밀번호 찾기</Text.FontSize56>
+          <Text.FontSize56 color={'#068d18'} fontWeight={700}>비밀번호 찾기</Text.FontSize56>
           <ForgetPasswordContainer>
             <Text.FontSize20 color={'#505050'}>비밀번호 찾기</Text.FontSize20>
-            <Text.FontSize22 color={'#0a2165'}>
+            <Text.FontSize22 color={'#068d18'}>
                 메일이 발송이 완료 되었습니다.<br/>
                 메일을 확인하시고 비밀번호를 재설정해 주세요.</Text.FontSize22>
             <ButtonBox>
-              <ButtonComponent backgroundColor={"#0a2165"} borderColor={WHITE} borderRadius={3} borderWidth={1} onClick={Auth.toLogIn}>
+              <ButtonComponent backgroundColor={"#068d18"} borderColor={WHITE} borderRadius={3} borderWidth={1} onClick={Auth.toLogIn}>
                 {
                   Auth.loading
                   ? <ButtonSpinnerComponent scale='50%' primary/>

@@ -1,89 +1,89 @@
 import React from "react";
 import styled from "styled-components";
-import Containerv1 from "components/Containerv1";
-import Background from "components/Background";
-import * as Title from "components/Title";
-import Fade from 'react-reveal/Fade';
 
-const Img = "/static/images/Home/Mobile/MobileBanner4/MobileBanner4Img.png"
+//Components
+import Background from "components/Background";
+import Containerv1 from "components/Containerv1";
+import * as Title from "components/Title";
+import * as Content from "components/Content";
+import Fade from "react-reveal/Fade";
+
+//Image
+const image1 = "/static/images/Home/Banner4/image1.jpg";
 
 class TabletBanner4Container extends React.Component {
   render() {
+
     return (
       <Background>
-        <ContentContainer>
+        <Containerv1
+          style={{
+            paddingBottom: 150,
+            paddingTop: 150,
+            justifyContent: "space-between",
+          }}
+        >
           <Fade bottom>
-            <Header>
-              제조 무료 상담 서비스
-            </Header>
-            <Middle>
-            최대 40년 경력의<br/>
-                컨설턴트 <p>무료 상담</p>
-            </Middle>
-            <ImgContainer>
-              <img src={ Img }/>
-            </ImgContainer>
-            <Body>
-            프로젝트마다 해당 의뢰의 전문가가 배정되어<br/>
-                무료상담을 통해 최적의 견적을 알려드립니다.
-            </Body>
+            <div>
+              <Header>골프장 정보 확인</Header>
+              <Middle style={{ fontSize: "32px" }}>
+              경치와 음식부터 <br />
+              캐디 정보까지
+              </Middle>
+
+              <Body>
+                전국 500 여 개 골프장 정보를
+                <br />
+                정보를 확인해보세요
+              </Body>
+            </div>
+            <div>
+              <img
+                src={image1}
+                style={{
+                  width: 347,
+                  height: 255,
+                  borderRadius: 7,
+                }}
+              />
+            </div>
           </Fade>
-        </ContentContainer>
+        </Containerv1>
       </Background>
     );
   }
 }
 
 export default TabletBanner4Container;
-const ContentContainer = styled(Containerv1)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-const Header = styled(Title.FontSize20)`
+
+const Header = styled(Title.FontSize17)`
   color: #0933b3;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.45;
+  line-height: 1.46;
   letter-spacing: normal;
-  margin: 100px 0px 2px 0px;
-  @media (min-width: 767.99px) and (max-width: 1279.98px) {
-    font-size: 17px;
-  }
-`
-const Middle = styled(Title.FontSize56)`
-  text-align: center;
+  margin-bottom: 2px;
+`;
+const Middle = styled(Content.FontSize24)`
+  //color: #f6f6f6;
   color: #282c36;
-  font-weight: normal;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.45;
-  letter-spacing: -0.55px;
-  >p {
-    display: inline;
-    font-weight:bold;
-  }
-  @media (min-width: 767.99px) and (max-width: 1279.98px) {
-    font-size: 24px;
-  }
-`
-const ImgContainer = styled.div`
-  margin: 30px 0px 22px 0px;
-`
-const Body = styled(Title.FontSize24)`
-  text-align: center;
-  white-space:nowrap;
+  line-height: 1.36;
+  letter-spacing: -1.4px;
+  margin-bottom: 62px;
+  font-size: 32px; !important;
+`;
+
+const Body = styled(Content.FontSize17)`
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.67;
-  letter-spacing: -0.38px;
+  letter-spacing: -0.6px;
   text-align: left;
-  color: #555963;
-  margin-bottom: 100px;
-  @media (min-width: 767.99px) and (max-width: 1279.98px) {
-    font-size: 17px;
-  }
-`
-
+  //color: #cedafe;
+  color: #282c36;
+`;

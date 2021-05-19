@@ -12,54 +12,16 @@ import * as Content from "components/Content";
 import * as Title from "components/Title";
 import Buttonv1 from "components/Buttonv1";
 import Fade from "react-reveal/Fade";
-import UseScrollCount from "./UseScrollCount";
 
-import * as ProposalAPI from "axios/Proposal";
-
-import { inject, observer } from "mobx-react";
 
 //Image
 const background = "static/images/Home/main.jpg";
-const lock = "static/images/Home/lock.svg";
-//
-const CountFunc = ({ index, projCount = 0, partnerCount = 0 }) => {
-  const countItem = {
-    0: UseScrollCount(10787400000, 10000000000, 0, 0, 2000000),
-    // 1: UseScrollCount(projCount,0,0,0,15),
-    1: UseScrollCount(5116, 0, 0, 0, 15),
-    2: UseScrollCount(4933, 0, 0, 0, 20),
-  };
 
-  return <p {...countItem[index]} style={{ display: "inline" }} />;
-};
-
-@inject("Proposal", "Partner", "Auth")
-@observer
 class Banner0Container extends React.Component {
-  state = {
-    projectCount: 0,
-  };
-  componentDidMount() {
-    const { Proposal, Partner } = this.props;
-    // Proposal.loadProjects();
-    // this.setState({projectCount:this.props.Proposal.projects_count})
-    ProposalAPI.getMyProject()
-      .then((res) => {
-        const pc = res.data.count * 3 + 997;
-        this.props.Proposal.projects_count = pc;
-        this.setState({ projectCount: res.data.count * 3 + 997 });
-      })
-      .catch((e) => {
-        console.log(e);
-        console.log(e.response);
-      });
-    Partner.loadPartnerCount();
-  }
+
 
   render() {
-    const ProjectCount = this.props.Proposal.projects_count;
-    const PartnerCount = this.props.Partner.partner_count;
-    const { Auth } = this.props;
+    
     return (
       <Background src={background}>
         <Layer />
@@ -92,7 +54,7 @@ class Banner0Container extends React.Component {
                 <Font24>국내 500 여개 모든 골프장 정보와 리뷰 확인</Font24>
               </Explanation>
 
-              <Buttonv1 onClick={() => Router.push("/request")}>
+              <Buttonv1 onClick={() => Router.push("/manufacturer")}>
                 지금 바로 확인하기
               </Buttonv1>
             </div>

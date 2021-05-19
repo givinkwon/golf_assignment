@@ -19,7 +19,7 @@ class Complete extends React.Component {
       <div>
         <Nav />
         <CompleteBannerContainer/>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

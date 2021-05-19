@@ -64,16 +64,15 @@ class FormConatiner extends React.Component {
         <Container >
         { width > 767.98 ? (
         <>
-          <Logo src={logo_ic}/>
-          <Text.FontSize24 color={'#0a2165'} style={{marginBottom:90}}>온라인 제조 상담 플랫폼</Text.FontSize24>
+          <Text.FontSize62 color={'#068d18'} style={{marginBottom:90, fontWeight:"600"}}>골프장 리뷰는 골프로</Text.FontSize62>
           <Input id="custom-css-outlined-input" placeholder="아이디"  onChange={Auth.setEmail}/>
           <Input id="custom-css-outlined-input" placeholder="비밀번호" type='password' onChange={Auth.setPassword} onKeyDown={this.handleKeyDown}/>
           <ButtonBox>
-            <ButtonComponent backgroundColor={"#0a2165"} borderColor={WHITE} borderRadius={3} borderWidth={1} onClick={Auth.login} >
+            <ButtonComponent backgroundColor={"#068d18"} borderColor={"#068d18"} borderRadius={3} borderWidth={1} onClick={Auth.login} >
               {
                 Auth.loading
                 ? <ButtonSpinnerComponent primary/>
-                : <Text.FontSize24 color={WHITE} fontWeight={500}>로그인</Text.FontSize24>
+                : <Text.FontSize24 color={"#068d18"} fontWeight={500}>로그인</Text.FontSize24>
               }
             </ButtonComponent>
             <ButtonComponent id="sign_up_button" backgroundColor={WHITE+'00'}  borderRadius={3} borderWidth={1} onClick={this.toSignUp}>
@@ -93,13 +92,13 @@ class FormConatiner extends React.Component {
               
         ) : (
         <>
-          <span class="header" color={'#0a2165'}>로그인</span>
+          <span class="header" color={'#068d18'}>로그인</span>
           <span class="title">이메일</span>
           <Input id="custom-css-outlined-input" placeholder="이메일"  onChange={Auth.setEmail}/>
           <span class="title">비밀번호</span>
           <Input id="custom-css-outlined-input" placeholder="비밀번호" type='password' onChange={Auth.setPassword} onKeyDown={this.handleKeyDown}/>
           <ButtonBox>
-            <ButtonComponent backgroundColor={"#0a2165"} borderColor={WHITE} borderRadius={3} borderWidth={1} onClick={Auth.login} >
+            <ButtonComponent backgroundColor={"#068d18"} borderColor={"#068d18"} borderRadius={3} borderWidth={1} onClick={Auth.login} >
               {
                 Auth.loading
                 ? <ButtonSpinnerComponent primary/>
@@ -133,11 +132,14 @@ class FormConatiner extends React.Component {
 
 export default FormConatiner
 
-const Logo = styled.img`
+const Logo = styled.div`
   /* cursor: pointer; */
   width: 383px;
   height: 60px;
   margin-bottom: 15px;
+  color: #068d18;
+  font-size: 70px;
+  font-weight: bolt;
 `;
 const Line = styled.img`
   width: 1px;

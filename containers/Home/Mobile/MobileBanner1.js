@@ -1,103 +1,89 @@
 import React from "react";
-import Background from "components/Background";
-import Containerv1 from "components/Containerv1";
-import * as Title from "components/Title";
 import styled from "styled-components";
+import Containerv1 from "components/Containerv1";
+import Background from "components/Background";
+import * as Title from "components/Title";
 import Fade from "react-reveal/Fade";
-import { inject, observer } from "mobx-react";
 
-// const MobileBanner1Img =
-//   "static/images/Home/Mobile/MobileBanner1/MobileBanner1Img.svg";
+const Img = "/static/images/Home/Banner1/image1.jpg";
 
-const MobileBannerImg =
-  "static/images/Home/Mobile/MobileBanner1/MobileBannerImg.png";
-const backgroundImg = "/static/images/Home/Banner3/Banner3_Bg.png";
-
-@inject("Proposal", "Partner")
-@observer
 class MobileBanner1Container extends React.Component {
   render() {
-    const ProjectCount = this.props.Proposal.projects_count;
     return (
-      <Background backgroundColor={"#0a2165"}>
+      <Background backgroundColor={"#ffffff"}>
         <ContentContainer>
           <Fade bottom>
-            <Head>볼트앤너트 AI 자동 견적</Head>
-            <Main>
-              {/* <span>
-                바로 나오는 <br />{" "}
-              </span>{" "} */}
-              바로 나오는
-              <br />
-              AI 자동 견적
-            </Main>
-            <ImageContainer>
-              <img src={MobileBannerImg} />
-            </ImageContainer>
-            <Content>
-              볼트앤너트 AI 자동 견적 알고리즘이
-              <br />
-              제작품에 대한 견적 범위를 바로 안내해드립니다.
-            </Content>
+            <Header>골프장 리뷰 확인</Header>
+            <Middle>
+            <span>국내 모든 골프장</span><br/>
+            <span>정보와 리뷰</span>
+            </Middle>
+            <ImgContainer>
+              <img
+                src={Img}
+                style={{ width: 347, height: 230, borderRadius: 7 }}
+              />
+            </ImgContainer>
+            <Body>
+              전국 500 여 개 골프장 리뷰를 온라인에서
+                <br />
+                한 번에 확인해보세요
+            </Body>
           </Fade>
         </ContentContainer>
       </Background>
     );
   }
 }
+
 export default MobileBanner1Container;
 const ContentContainer = styled(Containerv1)`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
-const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 29px 0px 18px 0px;
-`;
-const Head = styled(Title.FontSize20)`
+const Header = styled(Title.FontSize20)`
   height: 19px;
-  font-size: 14px;
-  color: #ffffff;
+  color: #0933b3;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.45;
   letter-spacing: normal;
-  margin: 70px 0px 3px 0px;
+  margin: 100px 0px 3px 0px;
   @media (min-width: 0px) and (max-width: 767.98px) {
     font-size: 13px;
   }
 `;
-const Main = styled(Title.FontSize56)`
-  color: #ffffff;
-  font-size: 23px;
+const Middle = styled(Title.FontSize56)`
+  text-align: center;
+  color: #282c36;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.45;
   letter-spacing: -0.55px;
-  text-align: center;
   > span {
+    display: inline;
     font-weight: bold;
   }
   @media (min-width: 0px) and (max-width: 767.98px) {
     font-size: 23px;
   }
 `;
-const Content = styled(Title.FontSize24)`
-  height: 46px;
-  font-size: 16px;
+const ImgContainer = styled.div`
+  margin: 32px 0px 18px 0px;
+`;
+const Body = styled(Title.FontSize16)`
+  text-align: center;
+  white-space: nowrap;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.47;
-  letter-spacing: -0.4px;
-  text-align: center;
-  color: #ffffff;
+  line-height: 1.67;
+  letter-spacing: -0.38px;
+  // text-align: left;
+  color: #414550;\
   margin-bottom: 100px;
   @media (min-width: 0px) and (max-width: 767.98px) {
     font-size: 16px;

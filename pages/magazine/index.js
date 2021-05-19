@@ -74,7 +74,7 @@ class Index extends React.Component {
           width={width}
           length={this.props.Magazine.magazine_length}
         />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

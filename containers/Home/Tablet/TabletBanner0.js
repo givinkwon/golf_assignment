@@ -12,37 +12,14 @@ import * as Content from "components/Content";
 import * as Title from "components/Title";
 import Buttonv1 from "components/Buttonv1";
 import Fade from "react-reveal/Fade";
-import UseScrollCount from "containers/Home/UseScrollCount";
-
-import { inject, observer } from "mobx-react";
 
 //Image
 const background = "static/images/Home/main.jpg";
-const lock = "static/images/Home/lock.svg";
 
-const CountFunc = ({ index, projCount = 0, partnerCount = 0 }) => {
-  const countItem = {
-    0: UseScrollCount(10787400000, 5000000000, 0, 0, 900000),
-    1: UseScrollCount(projCount, 0, 0, 0, 5),
-    2: UseScrollCount(4933, 0, 0, 0, 10),
-  };
 
-  return <p {...countItem[index]} style={{ display: "inline" }} />;
-};
-
-@inject("Proposal", "Partner","Auth")
-@observer
 class TabletBanner0Container extends React.Component {
-  componentDidMount() {
-    const { Proposal, Partner } = this.props;
-    Proposal.loadProjects();
-    Partner.loadPartnerCount();
-  }
-
+ 
   render() {
-    const ProjectCount = this.props.Proposal.projects_count;
-    const PartnerCount = this.props.Partner.partner_count;
-    const { Auth } = this.props;
 
     return (
       <Background
@@ -67,7 +44,7 @@ class TabletBanner0Container extends React.Component {
               fontWeight: 700,
               shadow: "0 3px 6px rgba(0,0,0,0.61)",
             }}
-            onClick={() => Router.push("/request")}
+            onClick={() => Router.push("/manufacturer")}
           >
             지금 바로 확인하기
           </Buttonv1>

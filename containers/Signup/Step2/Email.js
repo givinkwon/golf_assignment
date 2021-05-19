@@ -134,25 +134,22 @@ class EmailConatiner extends React.Component {
             </SelectBox>
           </W50>
 
-          <W50 left>
+          {/* <W50 left>
             <InputComponent placeholder='회사명을 입력해주세요' label='회사명' type='name' onChange={Auth.setName} value={Auth.name}/>
             <br/>
-            {Auth.type === 'expert' ? ''
-                                     :(<Text.FontSize15 color={BLACK} fontWeight={500}>개인일 경우 '개인'을 입력해주세요</Text.FontSize15>)
-            }
           </W50>
           <W50 right>
             <InputComponent placeholder='직위를 입력해주세요' label='직위' type='title' onChange={Auth.setTitle} value={Auth.title}/>
-          </W50>
+          </W50> */}
 
-          <W50 left>
+          {/* <W50 left>
             <SelectBox>
               <Text.FontSize20 color={DARKGRAY} fontWeight={500}>업종</Text.FontSize20>
               <SelectComponent
                 styles={customStyles} options={Auth.business_data} value={Auth.business}
                 getOptionLabel={(option) => option.business} placeholder='옵션을 선택해주세요' onChange={Auth.setBusiness}/>
             </SelectBox>
-          </W50>
+          </W50> */}
           {Auth.business && Auth.business.business == "기타" && <W50 right>
             <InputComponent placeholder='기타 업종을 입력해주세요' label='업종' type='business2' onChange={Auth.setBusiness2} value={Auth.business2}/>
             <br/>
@@ -189,7 +186,7 @@ class EmailConatiner extends React.Component {
             </SelectBox>
           </W100>
 
-          <W100>
+          {/* <W100>
             <InputComponent placeholder='회사명을 입력해주세요' label='회사명' type='name' onChange={Auth.setName} value={Auth.name}/>
           </W100>
           <W100>
@@ -206,7 +203,7 @@ class EmailConatiner extends React.Component {
           {Auth.business && Auth.business.business == "기타" && <W100>
             <InputComponent placeholder='기타 업종을 입력해주세요' label='업종' type='business2' onChange={Auth.setBusiness2} value={Auth.business2}/>
             <br/>
-          </W100>}
+          </W100>} */}
           </>
         )}
         </Content>

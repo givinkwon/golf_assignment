@@ -55,7 +55,7 @@ class PartnerDetail extends React.Component {
         </Head>
         <Nav />
         <PartnerReviewConatiner id={id}/>
-        <Footer/>
+        
       </div>
     )
   }

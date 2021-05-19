@@ -14,8 +14,7 @@ class SignupConatiner extends React.Component {
     return (
       <div style={{paddingTop: 90} }>
         <BannerConatiner/>
-        {Auth.step === 0 && <Step1Conatiner/>}
-        {Auth.step === 1 && <Step2Conatiner/>}
+        <Step2Conatiner/>
       </div>
     )
   }

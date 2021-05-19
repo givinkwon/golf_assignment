@@ -32,9 +32,9 @@ class CompleteContainer extends React.Component {
     return (
       <Form>
         <Container>
-          <Text.FontSize56 color={'#0a2165'} fontWeight={700}>아이디 찾기</Text.FontSize56>
+          <Text.FontSize56 color={'#068d18'} fontWeight={700}>아이디 찾기</Text.FontSize56>
           <ForgetIDContainer>
-            <Text.FontSize20 color={'#0a2165'} fontWeight={500}>
+            <Text.FontSize20 color={'#068d18'} fontWeight={500}>
                 입력하신 휴대전화번호로 가입된 아이디의 목록입니다.
             </Text.FontSize20>
             <Text.FontSize20>
@@ -42,14 +42,14 @@ class CompleteContainer extends React.Component {
               { 
                 this.props.Auth.restore_email && this.props.Auth.restore_email.map((item,idx)=> {
                   return(
-                  <Text.FontSize20 color={'#0a2165'}> {item} </Text.FontSize20>
+                  <Text.FontSize20 color={'#068d18'}> {item} </Text.FontSize20>
                   )
                 }) 
               }
             </div>
             </Text.FontSize20>
             <ButtonBox>
-              <ButtonComponent backgroundColor={"#0a2165"} borderColor={WHITE} borderRadius={3} borderWidth={1} onClick={this.toLogIn}>
+              <ButtonComponent backgroundColor={"#068d18"} borderColor={WHITE} borderRadius={3} borderWidth={1} onClick={this.toLogIn}>
                 {
                   Auth.loading
                   ? <ButtonSpinnerComponent scale='50%' primary/>

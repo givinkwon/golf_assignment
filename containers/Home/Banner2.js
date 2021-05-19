@@ -21,15 +21,15 @@ class Banner2Container extends React.Component {
         >
           <Fade bottom>
             <div>
-            <Header>골프장 리뷰 확인</Header>
+            <Header>골프장 정보 확인</Header>
               <Middle>
-                <span>국내 모든 골프장</span><br/>
-                <span>정보와 리뷰</span>
+                <span>가격, 시설 정보부터</span><br/>
+                <span>잔디 상태까지</span>
               </Middle>
               <Body>
-                전국 500 여 개 골프장 리뷰를
+                전국 500 여 개 골프장의 모든
                 <br />
-                확인해보세요
+                정보를 확인해보세요
               </Body>
             </div>
             <div>

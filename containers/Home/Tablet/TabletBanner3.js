@@ -1,25 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-
-//Components
-import Background from "components/Background";
 import Containerv1 from "components/Containerv1";
+import Background from "components/Background";
 import * as Title from "components/Title";
-import * as Content from "components/Content";
 import Fade from "react-reveal/Fade";
 
-import { inject, observer } from "mobx-react";
+const image = "/static/images/Home/Banner3/image1.jpg";
 
-//Image
-const image1 = "/static/images/Home/Banner3/image1.png";
-
-@inject("Proposal")
-@observer
 class TabletBanner3Container extends React.Component {
   render() {
-    const ProjectCount = this.props.Proposal.projects_count;
     return (
-      <Background>
+      <Background backgroundColor={"#ffffff"}>
         <Containerv1
           style={{
             paddingBottom: 150,
@@ -28,30 +19,28 @@ class TabletBanner3Container extends React.Component {
           }}
         >
           <Fade bottom>
-            <div>
-              <Header>무료 비교 견적 서비스</Header>
-              <Middle style={{ fontSize: "32px" }}>
-                전문 제조사들에게 <br />
-                다양한 비교 견적
-              </Middle>
-
-              <Body>
-                {/* {ProjectCount}개 프로젝트 데이터를 학습한 AI 매칭 알고리즘이<br/>
-                내 의뢰의 전문가를 큐레이션해드립니다. */}
-                원하는 품질과 납기를 만족하는 제조사들을 <br />
-                선별해 다양한 비교견적을 쉽고 편리하게 <br />
-                받을 수 있습니다.
-              </Body>
-            </div>
-            <div>
-              <img
-                src={image1}
-                style={{
+            <div style={{ marginRight: "-50px" }}>
+              <img src={image} style={{
                   width: 347,
                   height: 255,
                   borderRadius: 7,
-                }}
-              />
+                }} />
+            </div>
+            <div>
+              <Header>골프장 찾아보기</Header>
+              <Middle style={{ fontSize: "32px" }}>
+                <p>
+                원하는 모든 골프장을 <br />  한 번에 검색하세요.
+                </p>
+              </Middle>
+            
+              <Body>
+              내가 원하는 골프장을 찾아보세요. 
+                <br />
+                지역별, 특징별 필터로 원하는 
+                <br/>
+                골프장을 찾을 수 있습니다.
+              </Body>
             </div>
           </Fade>
         </Containerv1>
@@ -61,35 +50,54 @@ class TabletBanner3Container extends React.Component {
 }
 
 export default TabletBanner3Container;
-
-const Header = styled(Title.FontSize17)`
+const ContentContainer = styled(Containerv1)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const Header = styled(Title.FontSize20)`
   color: #0933b3;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.46;
+  line-height: 1.45;
   letter-spacing: normal;
-  margin-bottom: 2px;
+  //margin: 100px 0px 2px 0px;
+  @media (min-width: 767.99px) and (max-width: 1279.98px) {
+    font-size: 17px;
+  }
 `;
-const Middle = styled(Content.FontSize24)`
-  //color: #f6f6f6;
+const Middle = styled(Title.FontSize56)`
+  //text-align: center;
   color: #282c36;
-  font-weight: bold;
+  font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.36;
-  letter-spacing: -1.4px;
-  margin-bottom: 62px;
-  font-size: 32px; !important;
+  line-height: 1.45;
+  letter-spacing: -0.55px;
+  margin-bottom: 55px;
+  > p {
+    display: inline;
+    font-weight: bold;
+  }
+  @media (min-width: 767.99px) and (max-width: 1279.98px) {
+    font-size: 28px;
+  }
 `;
-
-const Body = styled(Content.FontSize17)`
+const ImgContainer = styled.div`
+  margin: 30px 0px 22px 0px;
+`;
+const Body = styled(Title.FontSize24)`
+  //text-align: center;
+  white-space: nowrap;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.67;
-  letter-spacing: -0.6px;
-  text-align: left;
-  //color: #cedafe;
-  color: #282c36;
+  letter-spacing: -0.38px;
+  color: #555963;
+  //margin-bottom: 100px;
+  @media (min-width: 767.99px) and (max-width: 1279.98px) {
+    font-size: 17px;
+  }
 `;

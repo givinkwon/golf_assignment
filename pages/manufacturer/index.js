@@ -68,7 +68,7 @@ class Index extends React.Component {
         </>
 
         <ManufacturerContainer width={width} />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

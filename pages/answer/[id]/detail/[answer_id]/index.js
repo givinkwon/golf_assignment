@@ -56,7 +56,7 @@ class AnswerDetail extends Component {
         </Head>
         <Nav />
         <AnswerDetailContainer />
-        <Footer/>
+
       </div>
 		)
 	}

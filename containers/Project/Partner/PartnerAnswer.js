@@ -244,7 +244,7 @@ class PartnerAnswer extends React.Component {
                 <FontSize18
                   style={{
                     fontWeight: 500,
-                    color: "#0933b3",
+                    color: "#068d18",
                   }}
                 >
                   프로젝트 답변

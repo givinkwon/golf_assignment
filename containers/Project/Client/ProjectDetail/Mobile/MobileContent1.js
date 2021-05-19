@@ -204,7 +204,7 @@ render() {
           <Head></Head>
         <div style = {{marginBottom: 40}}>
           <Head>
-            <Font15 style = {{color: "#0933b3", marginBottom: 14, fontWeight: 'bold'}}>{projectDetailData &&projectDetailData.request_set[0].request_state}</Font15>
+            <Font15 style = {{color: "#068d18", marginBottom: 14, fontWeight: 'bold'}}>{projectDetailData &&projectDetailData.request_set[0].request_state}</Font15>
 
             <Font16 style = {{marginBottom: 8, fontWeight: 'bold', color: '#282c36', }}>{name}</Font16>
             <div style = {{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>

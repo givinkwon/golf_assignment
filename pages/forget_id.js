@@ -53,7 +53,7 @@ class ForgetId extends React.Component {
         { width && width > 767.98 && <Nav />}
         { width && width < 768 && <MobileNav src={ logo_ic } width={ width }/>}
         <ForgetIdConatiner/>
-        <Footer/>
+
       </div>
     )
   }

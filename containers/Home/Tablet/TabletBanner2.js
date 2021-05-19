@@ -1,17 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import Containerv1 from "components/Containerv1";
+
+//Components
 import Background from "components/Background";
+import Containerv1 from "components/Containerv1";
 import * as Title from "components/Title";
+import * as Content from "components/Content";
 import Fade from "react-reveal/Fade";
 
-const Img = "/static/images/Home/Banner2/image1.png";
-const image1 = "/static/images/Home/Banner2/image1.png";
+//Image
+const image1 = "/static/images/Home/Banner2/image1.jpg";
 
 class TabletBanner2Container extends React.Component {
   render() {
+
     return (
-      <Background backgroundColor={"#ffffff"}>
+      <Background>
         <Containerv1
           style={{
             paddingBottom: 150,
@@ -20,28 +24,28 @@ class TabletBanner2Container extends React.Component {
           }}
         >
           <Fade bottom>
-            <div style={{ marginRight: "-50px" }}>
-              <img src={image1} style={{ height: "80%", width: "80%" }} />
-            </div>
             <div>
-              <Header>무료 생산 상담</Header>
-              <Middle>
-                <p>
-                  내가 설계한 부품장비 <br /> 생산에 문제가 없을까?
-                </p>
+              <Header>골프장 정보 확인</Header>
+              <Middle style={{ fontSize: "32px" }}>
+              가격, 시설 정보부터 <br />
+              잔디 상태까지
               </Middle>
-              {/* <ImgContainer>
-              <img
-                src={Img}
-                style={{ width: 347, height: 230, borderRadius: 7 }}
-              />
-            </ImgContainer> */}
 
               <Body>
-                생산에 대한 모든 문의사항을 4000여 개
+                전국 500 여 개 골프장의 모든
                 <br />
-                전문 제조사들이 바로 상담해드립니다.
+                정보를 확인해보세요
               </Body>
+            </div>
+            <div>
+              <img
+                src={image1}
+                style={{
+                  width: 347,
+                  height: 255,
+                  borderRadius: 7,
+                }}
+              />
             </div>
           </Fade>
         </Containerv1>
@@ -51,54 +55,35 @@ class TabletBanner2Container extends React.Component {
 }
 
 export default TabletBanner2Container;
-const ContentContainer = styled(Containerv1)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const Header = styled(Title.FontSize20)`
+
+const Header = styled(Title.FontSize17)`
   color: #0933b3;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.45;
+  line-height: 1.46;
   letter-spacing: normal;
-  //margin: 100px 0px 2px 0px;
-  @media (min-width: 767.99px) and (max-width: 1279.98px) {
-    font-size: 17px;
-  }
+  margin-bottom: 2px;
 `;
-const Middle = styled(Title.FontSize56)`
-  //text-align: center;
+const Middle = styled(Content.FontSize24)`
+  //color: #f6f6f6;
   color: #282c36;
-  font-weight: normal;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.45;
-  letter-spacing: -0.55px;
-  margin-bottom: 55px;
-  > p {
-    display: inline;
-    font-weight: bold;
-  }
-  @media (min-width: 767.99px) and (max-width: 1279.98px) {
-    font-size: 28px;
-  }
+  line-height: 1.36;
+  letter-spacing: -1.4px;
+  margin-bottom: 62px;
+  font-size: 32px; !important;
 `;
-const ImgContainer = styled.div`
-  margin: 30px 0px 22px 0px;
-`;
-const Body = styled(Title.FontSize24)`
-  //text-align: center;
-  white-space: nowrap;
+
+const Body = styled(Content.FontSize17)`
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.67;
-  letter-spacing: -0.38px;
-  color: #555963;
-  //margin-bottom: 100px;
-  @media (min-width: 767.99px) and (max-width: 1279.98px) {
-    font-size: 17px;
-  }
+  letter-spacing: -0.6px;
+  text-align: left;
+  //color: #cedafe;
+  color: #282c36;
 `;
